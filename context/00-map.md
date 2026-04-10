@@ -22,15 +22,32 @@ Read:
 
 ### Model a domain or capability
 Read:
-1. `context/principles/02-ubiquitous-language-and-naming.md`
-2. `context/principles/03-bounded-contexts-and-boundaries.md`
-3. `context/principles/04-workflows-invariants-and-state.md`
-4. `context/principles/05-errors-and-edge-responsibilities.md`
+1. `context/playbooks/01-domain-modeling-playbook.md`
+2. `context/principles/02-ubiquitous-language-and-naming.md`
+3. `context/principles/03-bounded-contexts-and-boundaries.md`
+4. `context/principles/04-workflows-invariants-and-state.md`
+
+### Define a bounded context
+Read:
+1. `context/playbooks/02-bounded-context-definition-playbook.md`
+2. `context/review/02-architecture-review-checklist.md`
+
+### Model workflow behavior or state changes
+Read:
+1. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
+2. `context/principles/05-errors-and-edge-responsibilities.md`
+
+### Review docs or designs
+Read:
+1. `context/review/01-quality-gates.md`
+2. `context/review/03-documentation-quality-checklist.md`
+3. `context/review/05-vocabulary-drift-checklist.md`
 
 ### Decide how examples should behave
 Read:
 1. `docs/adr/0001-example-strategy.md`
-2. `examples/README.md`
+2. `context/review/04-example-acceptance-criteria.md`
+3. `examples/README.md`
 
 ## Areas
 
@@ -41,23 +58,29 @@ Entry docs:
 - `context/principles/00-map.md`
 - `context/manifests/principles-manifest.yaml`
 
-### `patterns/`
-Reusable structures such as boundaries, workflows, errors, state transitions, integration seams, and decomposition approaches.
+### `glossary/`
+Vocabulary and naming guidance.
 
-Current state: planned.
+Entry docs:
+- `context/glossary/00-map.md`
+- `context/manifests/glossary-manifest.yaml`
 
 ### `playbooks/`
 Task-oriented guidance.
 
-Current state: planned.
-
-### `glossary/`
-Vocabulary and term definitions.
-
-Current state: planned.
+Entry docs:
+- `context/playbooks/00-map.md`
+- `context/manifests/playbooks-manifest.yaml`
 
 ### `review/`
 Checklists and quality gates.
+
+Entry docs:
+- `context/review/00-map.md`
+- `context/manifests/review-manifest.yaml`
+
+### `patterns/`
+Reusable structures such as boundaries, workflows, errors, state transitions, integration seams, and decomposition approaches.
 
 Current state: planned.
 
@@ -67,7 +90,6 @@ Machine-readable retrieval metadata.
 Current entry docs:
 - `context/manifests/README.md`
 - `context/manifests/project-manifest.yaml`
-- `context/manifests/principles-manifest.yaml`
 
 ## Authoring rules for this directory
 
@@ -77,11 +99,9 @@ Current entry docs:
 - prefer tables, checklists, state descriptions, and short examples over long prose
 - update maps and manifests when adding new canonical docs
 
-## Current canonical principle set
+## Current canonical layers available now
 
-- information architecture and manifests
-- ubiquitous language and naming
-- bounded contexts and boundaries
-- workflows, invariants, and state
-- errors and edge responsibilities
-- deep modules and information hiding
+- principles
+- glossary
+- playbooks
+- review

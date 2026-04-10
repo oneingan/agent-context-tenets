@@ -1,11 +1,9 @@
 # Playbooks
 
-Planned home for task-oriented guidance.
+This directory holds task-oriented procedures.
 
-Examples of future playbooks:
+Start with:
+- `context/playbooks/00-map.md`
+- `context/manifests/playbooks-manifest.yaml`
 
-- model a domain
-- define a bounded context
-- review architecture
-- introduce an integration
-- write an ADR
+Use playbooks after reading the relevant principle docs for the task.

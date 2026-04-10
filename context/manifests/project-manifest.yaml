@@ -1,6 +1,6 @@
 repo:
   name: agent-context-tenets
-  status: phase-1-active
+  status: phase-2-active
   purpose: >-
     A reusable, language-agnostic AI agent context framework optimized for
     progressive loading under limited context windows.
@@ -30,36 +30,42 @@ areas:
       - resolving ambiguity in core concepts
     status: active
 
+  - path: context/glossary
+    role: vocabulary
+    map: context/glossary/00-map.md
+    manifest: context/manifests/glossary-manifest.yaml
+    load_when:
+      - naming entities
+      - aligning terms
+      - interpreting documents consistently
+    status: active
+
+  - path: context/playbooks
+    role: task-guidance
+    map: context/playbooks/00-map.md
+    manifest: context/manifests/playbooks-manifest.yaml
+    load_when:
+      - executing a design task
+      - writing or reviewing artifacts
+      - onboarding an agent session
+    status: active
+
+  - path: context/review
+    role: checklists-and-gates
+    map: context/review/00-map.md
+    manifest: context/manifests/review-manifest.yaml
+    load_when:
+      - architecture review
+      - contribution review
+      - release/readiness assessment
+    status: active
+
   - path: context/patterns
     role: reusable-structures
     load_when:
       - comparing design options
       - modeling workflows or boundaries
       - selecting decomposition patterns
-    status: planned
-
-  - path: context/playbooks
-    role: task-guidance
-    load_when:
-      - executing a design task
-      - writing or reviewing artifacts
-      - onboarding an agent session
-    status: planned
-
-  - path: context/glossary
-    role: vocabulary
-    load_when:
-      - naming entities
-      - aligning terms
-      - interpreting documents consistently
-    status: planned
-
-  - path: context/review
-    role: checklists-and-gates
-    load_when:
-      - architecture review
-      - contribution review
-      - release/readiness assessment
     status: planned
 
   - path: context/manifests
@@ -91,6 +97,28 @@ canonical_documents:
     topic: errors-and-edges
   - path: context/principles/06-deep-modules-and-information-hiding.md
     topic: complexity-and-structure
+  - path: context/glossary/01-framework-glossary.md
+    topic: framework-vocabulary
+  - path: context/glossary/02-naming-and-term-introduction.md
+    topic: naming-and-term-governance
+  - path: context/playbooks/01-domain-modeling-playbook.md
+    topic: domain-modeling-playbook
+  - path: context/playbooks/02-bounded-context-definition-playbook.md
+    topic: bounded-context-playbook
+  - path: context/playbooks/03-workflow-and-state-modeling-playbook.md
+    topic: workflow-playbook
+  - path: context/playbooks/04-adr-writing-playbook.md
+    topic: adr-playbook
+  - path: context/review/01-quality-gates.md
+    topic: quality-gates
+  - path: context/review/02-architecture-review-checklist.md
+    topic: architecture-review
+  - path: context/review/03-documentation-quality-checklist.md
+    topic: documentation-review
+  - path: context/review/04-example-acceptance-criteria.md
+    topic: example-review
+  - path: context/review/05-vocabulary-drift-checklist.md
+    topic: vocabulary-review
   - path: docs/adr/0001-example-strategy.md
     topic: examples-policy
   - path: docs/adr/0002-information-architecture-and-manifests.md

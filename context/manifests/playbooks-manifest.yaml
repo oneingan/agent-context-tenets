@@ -1,0 +1,68 @@
+manifest_version: 1
+area: playbooks
+map: context/playbooks/00-map.md
+status: active
+
+entries:
+  - path: context/playbooks/01-domain-modeling-playbook.md
+    title: Domain Modeling Playbook
+    canonical: true
+    summary: Guides the discovery of language, events, invariants, and candidate boundaries.
+    load_when:
+      - starting a new domain model
+      - shaping an exemplar domain
+      - clarifying a vague capability
+    tags:
+      - playbook
+      - domain-modeling
+      - ddd
+    next_reads:
+      - context/playbooks/02-bounded-context-definition-playbook.md
+      - context/playbooks/03-workflow-and-state-modeling-playbook.md
+
+  - path: context/playbooks/02-bounded-context-definition-playbook.md
+    title: Bounded Context Definition Playbook
+    canonical: true
+    summary: Guides the definition of a bounded context, its responsibilities, and its seam contracts.
+    load_when:
+      - defining a new bounded context
+      - reviewing context leakage
+      - documenting ownership boundaries
+    tags:
+      - playbook
+      - bounded-contexts
+      - boundaries
+    next_reads:
+      - context/review/02-architecture-review-checklist.md
+
+  - path: context/playbooks/03-workflow-and-state-modeling-playbook.md
+    title: Workflow and State Modeling Playbook
+    canonical: true
+    summary: Guides the description of triggers, transitions, invariants, failure modes, and edge effects.
+    load_when:
+      - modeling a workflow
+      - documenting state transitions
+      - clarifying long-running behavior
+    tags:
+      - playbook
+      - workflows
+      - state
+    next_reads:
+      - context/principles/04-workflows-invariants-and-state.md
+      - context/review/02-architecture-review-checklist.md
+
+  - path: context/playbooks/04-adr-writing-playbook.md
+    title: ADR Writing Playbook
+    canonical: true
+    summary: Guides the capture of structural decisions, rationale, alternatives, and consequences.
+    load_when:
+      - recording architectural decisions
+      - resolving recurring ambiguities
+      - changing structural policies
+    tags:
+      - playbook
+      - adr
+      - governance
+    next_reads:
+      - docs/adr/0002-information-architecture-and-manifests.md
+      - context/review/01-quality-gates.md

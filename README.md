@@ -44,10 +44,11 @@ This repo is being designed from three main sources:
 The canonical layer should be mostly:
 
 - prose principles
-- checklists
+- glossaries and naming rules
+- playbooks and checklists
 - decision records
 - manifests and schemas
-- maps and glossaries
+- maps and review artifacts
 
 ### Examples policy
 
@@ -75,19 +76,20 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
 
-### Canonical principles available now
+### Canonical layers available now
 
-- `context/principles/01-information-architecture-and-manifests.md`
-- `context/principles/02-ubiquitous-language-and-naming.md`
-- `context/principles/03-bounded-contexts-and-boundaries.md`
-- `context/principles/04-workflows-invariants-and-state.md`
-- `context/principles/05-errors-and-edge-responsibilities.md`
-- `context/principles/06-deep-modules-and-information-hiding.md`
+- `context/principles/00-map.md` — canonical design rules
+- `context/glossary/00-map.md` — vocabulary and naming governance
+- `context/playbooks/00-map.md` — task-oriented procedures
+- `context/review/00-map.md` — quality gates and checklists
 
 ### Operational files
 
 - `context/manifests/project-manifest.yaml` — machine-readable load map
-- `context/manifests/principles-manifest.yaml` — machine-readable principle index
+- `context/manifests/principles-manifest.yaml` — principle index
+- `context/manifests/glossary-manifest.yaml` — glossary index
+- `context/manifests/playbooks-manifest.yaml` — playbook index
+- `context/manifests/review-manifest.yaml` — review index
 - `.pi/todos/` — implementation backlog for the repo itself
 
 ## Success criteria for v0
@@ -104,16 +106,18 @@ A good v0 should let an agent:
 
 The repository now includes:
 
-- git initialization and initial commit
+- git initialization and commits
 - planning and research documents
 - ADRs for example strategy and information architecture
-- a first canonical principles set
+- canonical principles derived from the source books
+- glossary and naming governance
+- playbooks for domain modeling, boundaries, workflows, and ADRs
+- review checklists and repo quality gates
 - context maps, manifests, and templates
 - `/todos`-based implementation backlog stored in-repo
 
 ## Recommended next steps
 
-- author glossary and naming artifacts
-- create playbooks for domain modeling and bounded-context definition
-- define review checklists and quality gates
 - choose a first exemplar domain for pseudocode-first examples
+- add pattern docs for recurrent solution shapes
+- evaluate lightweight tooling for manifest validation and doc linting

@@ -1,3 +1,9 @@
 # Glossary
 
-Planned home for stable vocabulary used by the framework and its exemplar domains.
+This directory holds stable vocabulary for the framework and future exemplar domains.
+
+Start with:
+- `context/glossary/00-map.md`
+- `context/manifests/glossary-manifest.yaml`
+
+Use glossary docs before inventing new terms or renaming existing ones.
