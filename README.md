@@ -61,12 +61,33 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 
 ## Repository map
 
+### Start here
+
+1. `README.md`
+2. `context/00-map.md`
+3. `context/manifests/project-manifest.yaml`
+
+### Design and research
+
 - `docs/repository-plan.md` — implementation roadmap
 - `docs/research/source-synthesis.md` — distilled design inputs
 - `docs/research/context-window-strategy.md` — large-repo operating model for agents
-- `docs/adr/0001-example-strategy.md` — decision on code vs pseudocode vs polyglot examples
-- `context/00-map.md` — how an agent should navigate the future context corpus
+- `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
+- `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
+
+### Canonical principles available now
+
+- `context/principles/01-information-architecture-and-manifests.md`
+- `context/principles/02-ubiquitous-language-and-naming.md`
+- `context/principles/03-bounded-contexts-and-boundaries.md`
+- `context/principles/04-workflows-invariants-and-state.md`
+- `context/principles/05-errors-and-edge-responsibilities.md`
+- `context/principles/06-deep-modules-and-information-hiding.md`
+
+### Operational files
+
 - `context/manifests/project-manifest.yaml` — machine-readable load map
+- `context/manifests/principles-manifest.yaml` — machine-readable principle index
 - `.pi/todos/` — implementation backlog for the repo itself
 
 ## Success criteria for v0
@@ -81,12 +102,18 @@ A good v0 should let an agent:
 
 ## Current status
 
-The repository has been bootstrapped with:
+The repository now includes:
 
-- git initialization
-- planning documents
-- research notes
-- a context navigation skeleton
+- git initialization and initial commit
+- planning and research documents
+- ADRs for example strategy and information architecture
+- a first canonical principles set
+- context maps, manifests, and templates
 - `/todos`-based implementation backlog stored in-repo
 
-If you want, the next step can be to start authoring the first canonical context packs and templates.
+## Recommended next steps
+
+- author glossary and naming artifacts
+- create playbooks for domain modeling and bounded-context definition
+- define review checklists and quality gates
+- choose a first exemplar domain for pseudocode-first examples

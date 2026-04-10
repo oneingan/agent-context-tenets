@@ -1,0 +1,96 @@
+manifest_version: 1
+area: principles
+map: context/principles/00-map.md
+status: active
+
+entries:
+  - path: context/principles/01-information-architecture-and-manifests.md
+    title: Information Architecture and Manifest Conventions
+    canonical: true
+    summary: Defines layer responsibilities, load order, size budgets, and manifest rules.
+    load_when:
+      - shaping repository structure
+      - adding a new context area
+      - deciding where a new document belongs
+    tags:
+      - information-architecture
+      - manifests
+      - retrieval
+    next_reads:
+      - context/principles/06-deep-modules-and-information-hiding.md
+
+  - path: context/principles/02-ubiquitous-language-and-naming.md
+    title: Ubiquitous Language and Naming
+    canonical: true
+    summary: Defines vocabulary-first design and naming rules for canonical artifacts.
+    load_when:
+      - introducing or renaming concepts
+      - reviewing vocabulary drift
+      - authoring glossary entries
+    tags:
+      - ubiquitous-language
+      - naming
+      - glossary
+    next_reads:
+      - context/principles/03-bounded-contexts-and-boundaries.md
+
+  - path: context/principles/03-bounded-contexts-and-boundaries.md
+    title: Bounded Contexts and Boundaries
+    canonical: true
+    summary: Explains how to partition models, define seams, and manage translation between contexts.
+    load_when:
+      - decomposing a domain
+      - defining boundaries
+      - reviewing context leakage
+    tags:
+      - bounded-contexts
+      - boundaries
+      - decomposition
+    next_reads:
+      - context/principles/04-workflows-invariants-and-state.md
+      - context/principles/05-errors-and-edge-responsibilities.md
+
+  - path: context/principles/04-workflows-invariants-and-state.md
+    title: Workflows, Invariants, and State
+    canonical: true
+    summary: Shows how to describe behavior, transitions, constraints, and long-running flows.
+    load_when:
+      - designing workflows
+      - documenting lifecycle behavior
+      - making invariants explicit
+    tags:
+      - workflows
+      - invariants
+      - state
+    next_reads:
+      - context/principles/05-errors-and-edge-responsibilities.md
+
+  - path: context/principles/05-errors-and-edge-responsibilities.md
+    title: Errors and Edge Responsibilities
+    canonical: true
+    summary: Separates domain-significant failures from edge and operational concerns.
+    load_when:
+      - modeling errors
+      - defining integration seams
+      - reviewing core/edge purity
+    tags:
+      - errors
+      - boundaries
+      - edge-concerns
+    next_reads:
+      - context/principles/06-deep-modules-and-information-hiding.md
+
+  - path: context/principles/06-deep-modules-and-information-hiding.md
+    title: Deep Modules and Information Hiding
+    canonical: true
+    summary: Defines structure rules that keep the knowledge base compact, deep, and low-duplication.
+    load_when:
+      - refactoring structure
+      - reducing retrieval cost
+      - reviewing duplication and abstraction leakage
+    tags:
+      - deep-modules
+      - information-hiding
+      - complexity
+    next_reads:
+      - context/principles/01-information-architecture-and-manifests.md

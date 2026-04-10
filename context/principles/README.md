@@ -1,12 +1,9 @@
 # Principles
 
-Planned home for canonical, stable rules.
+This directory contains the canonical rules for the framework.
 
-Examples of future topics:
+Start with:
+- `context/principles/00-map.md`
+- `context/manifests/principles-manifest.yaml`
 
-- ubiquitous language
-- bounded contexts
-- deep modules and information hiding
-- workflows and state transitions
-- invariants and error models
-- naming and consistency
+These docs should remain more authoritative than examples.
