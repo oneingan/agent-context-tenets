@@ -1,11 +1,9 @@
 # Patterns
 
-Planned home for reusable structures and solution shapes.
+This directory holds reusable solution shapes that sit between principles and playbooks.
 
-Examples of future topics:
+Start with:
+- `context/patterns/00-map.md`
+- `context/manifests/patterns-manifest.yaml`
 
-- boundary patterns
-- context mapping patterns
-- workflow/pipeline patterns
-- integration seam patterns
-- review and decomposition patterns
+Use patterns when principles are too abstract and playbooks are too task-specific.

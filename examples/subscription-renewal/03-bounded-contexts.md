@@ -69,4 +69,5 @@ Keeping these separate protects the core model from edge churn.
 
 - `examples/subscription-renewal/02-glossary.md`
 - `examples/subscription-renewal/04-workflows-and-state.md`
+- `context/patterns/01-boundary-and-decomposition-patterns.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`

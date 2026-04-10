@@ -8,6 +8,7 @@ Start with:
 - `glossary-manifest.yaml`
 - `playbooks-manifest.yaml`
 - `review-manifest.yaml`
+- `patterns-manifest.yaml`
 - `examples-manifest.yaml`
 
 Rules:

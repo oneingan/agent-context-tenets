@@ -20,6 +20,11 @@ Read:
 2. `context/principles/06-deep-modules-and-information-hiding.md`
 3. `docs/adr/0002-information-architecture-and-manifests.md`
 
+### Compare reusable design shapes
+Read:
+1. `context/patterns/00-map.md`
+2. the smallest relevant pattern doc for boundaries, workflows, errors, or examples
+
 ### Model a domain or capability
 Read:
 1. `context/playbooks/01-domain-modeling-playbook.md`
@@ -30,12 +35,14 @@ Read:
 ### Define a bounded context
 Read:
 1. `context/playbooks/02-bounded-context-definition-playbook.md`
-2. `context/review/02-architecture-review-checklist.md`
+2. `context/patterns/01-boundary-and-decomposition-patterns.md`
+3. `context/review/02-architecture-review-checklist.md`
 
 ### Model workflow behavior or state changes
 Read:
 1. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
-2. `context/principles/05-errors-and-edge-responsibilities.md`
+2. `context/patterns/02-workflow-and-state-transition-patterns.md`
+3. `context/principles/05-errors-and-edge-responsibilities.md`
 
 ### Review docs or designs
 Read:
@@ -52,8 +59,9 @@ Read:
 ### Decide how examples should behave
 Read:
 1. `docs/adr/0001-example-strategy.md`
-2. `context/review/04-example-acceptance-criteria.md`
-3. `examples/README.md`
+2. `context/patterns/04-example-linking-patterns.md`
+3. `context/review/04-example-acceptance-criteria.md`
+4. `examples/README.md`
 
 ## Areas
 
@@ -63,6 +71,13 @@ Canonical rules and stable design tenets.
 Entry docs:
 - `context/principles/00-map.md`
 - `context/manifests/principles-manifest.yaml`
+
+### `patterns/`
+Reusable structures and comparative solution shapes.
+
+Entry docs:
+- `context/patterns/00-map.md`
+- `context/manifests/patterns-manifest.yaml`
 
 ### `glossary/`
 Vocabulary and naming guidance.
@@ -84,11 +99,6 @@ Checklists and quality gates.
 Entry docs:
 - `context/review/00-map.md`
 - `context/manifests/review-manifest.yaml`
-
-### `patterns/`
-Reusable structures such as boundaries, workflows, errors, state transitions, integration seams, and decomposition approaches.
-
-Current state: planned.
 
 ### `examples/`
 Secondary, pseudocode-first illustrations.
@@ -115,6 +125,7 @@ Current entry docs:
 ## Current canonical layers available now
 
 - principles
+- patterns
 - glossary
 - playbooks
 - review

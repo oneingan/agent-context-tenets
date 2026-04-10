@@ -44,6 +44,7 @@ This repo is being designed from three main sources:
 The canonical layer should be mostly:
 
 - prose principles
+- reusable patterns
 - glossaries and naming rules
 - playbooks and checklists
 - decision records
@@ -76,10 +77,12 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
 - `docs/adr/0003-first-exemplar-domain-subscription-renewal.md` — rationale for the first worked example
+- `docs/adr/0004-lightweight-validation-before-agent-exports.md` — tooling strategy
 
 ### Canonical layers available now
 
 - `context/principles/00-map.md` — canonical design rules
+- `context/patterns/00-map.md` — reusable solution shapes
 - `context/glossary/00-map.md` — vocabulary and naming governance
 - `context/playbooks/00-map.md` — task-oriented procedures
 - `context/review/00-map.md` — quality gates and checklists
@@ -89,10 +92,19 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `examples/00-map.md` — example entrypoint
 - `examples/subscription-renewal/00-map.md` — first exemplar domain
 
+### Lightweight tooling available now
+
+- `tooling/README.md`
+- `tooling/run-checks.sh`
+- `tooling/validate-manifests.sh`
+- `tooling/check-doc-budgets.sh`
+- `tooling/tooling-evaluation.md`
+
 ### Operational files
 
 - `context/manifests/project-manifest.yaml` — machine-readable load map
 - `context/manifests/principles-manifest.yaml` — principle index
+- `context/manifests/patterns-manifest.yaml` — pattern index
 - `context/manifests/glossary-manifest.yaml` — glossary index
 - `context/manifests/playbooks-manifest.yaml` — playbook index
 - `context/manifests/review-manifest.yaml` — review index
@@ -115,17 +127,19 @@ The repository now includes:
 
 - git initialization and commits
 - planning and research documents
-- ADRs for example strategy, information architecture, and exemplar-domain choice
+- ADRs for example strategy, information architecture, exemplar-domain choice, and lightweight tooling strategy
 - canonical principles derived from the source books
+- reusable patterns for boundaries, workflows, errors, and example linking
 - glossary and naming governance
 - playbooks for domain modeling, boundaries, workflows, and ADRs
 - review checklists and repo quality gates
 - a first exemplar domain: subscription renewal
+- lightweight validation scripts for manifests and doc budgets
 - context maps, manifests, and templates
 - `/todos`-based implementation backlog stored in-repo
 
 ## Recommended next steps
 
-- add pattern docs for recurrent solution shapes
-- evaluate lightweight tooling for manifest validation and doc linting
-- add polyglot micro-examples later only when a language-specific lesson is worth the extra context
+- experiment with additional exemplar domains only if they teach new lessons
+- revisit export automation later if manual reuse becomes painful
+- add polyglot micro-examples only when a language-specific lesson is worth the extra context

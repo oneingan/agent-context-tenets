@@ -1,0 +1,69 @@
+manifest_version: 1
+area: patterns
+map: context/patterns/00-map.md
+status: active
+
+entries:
+  - path: context/patterns/01-boundary-and-decomposition-patterns.md
+    title: Boundary and Decomposition Patterns
+    canonical: true
+    summary: Reusable ways to partition ownership, language, change pressure, and translation seams.
+    load_when:
+      - comparing decomposition choices
+      - deciding where translation seams belong
+      - reviewing context leakage
+    tags:
+      - patterns
+      - boundaries
+      - decomposition
+    next_reads:
+      - context/playbooks/02-bounded-context-definition-playbook.md
+      - examples/subscription-renewal/03-bounded-contexts.md
+
+  - path: context/patterns/02-workflow-and-state-transition-patterns.md
+    title: Workflow and State Transition Patterns
+    canonical: true
+    summary: Reusable workflow, state, and long-running behavior shapes.
+    load_when:
+      - comparing workflow modeling options
+      - deciding how to represent state transitions
+      - designing long-running flows
+    tags:
+      - patterns
+      - workflows
+      - state
+    next_reads:
+      - context/playbooks/03-workflow-and-state-modeling-playbook.md
+      - examples/subscription-renewal/04-workflows-and-state.md
+
+  - path: context/patterns/03-error-and-edge-translation-patterns.md
+    title: Error and Edge Translation Patterns
+    canonical: true
+    summary: Reusable ways to classify failures, translate edge details, and isolate operational concerns.
+    load_when:
+      - defining failure surfaces
+      - deciding where retries or translations belong
+      - reviewing edge leakage
+    tags:
+      - patterns
+      - errors
+      - edges
+    next_reads:
+      - context/principles/05-errors-and-edge-responsibilities.md
+      - examples/subscription-renewal/05-invariants-and-failure-model.md
+
+  - path: context/patterns/04-example-linking-patterns.md
+    title: Example Linking Patterns
+    canonical: true
+    summary: Reusable ways to keep examples illustrative, focused, and linked back to canonical docs.
+    load_when:
+      - adding new examples
+      - reviewing example structure
+      - connecting examples to patterns and principles
+    tags:
+      - patterns
+      - examples
+      - retrieval
+    next_reads:
+      - context/review/04-example-acceptance-criteria.md
+      - examples/00-map.md

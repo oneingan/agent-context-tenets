@@ -42,6 +42,9 @@ Subscription renewal is a good first exemplar because it demonstrates:
 - `context/playbooks/01-domain-modeling-playbook.md`
 - `context/playbooks/02-bounded-context-definition-playbook.md`
 - `context/playbooks/03-workflow-and-state-modeling-playbook.md`
+- `context/patterns/01-boundary-and-decomposition-patterns.md`
+- `context/patterns/02-workflow-and-state-transition-patterns.md`
+- `context/patterns/03-error-and-edge-translation-patterns.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`
 - `context/principles/04-workflows-invariants-and-state.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`

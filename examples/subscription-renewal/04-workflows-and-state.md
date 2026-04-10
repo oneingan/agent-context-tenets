@@ -93,4 +93,5 @@
 - `examples/subscription-renewal/05-invariants-and-failure-model.md`
 - `examples/subscription-renewal/pseudocode/renew-subscription.md`
 - `examples/subscription-renewal/pseudocode/process-billing-outcome.md`
+- `context/patterns/02-workflow-and-state-transition-patterns.md`
 - `context/principles/04-workflows-invariants-and-state.md`

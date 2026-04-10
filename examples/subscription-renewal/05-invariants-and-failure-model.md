@@ -65,5 +65,6 @@ A gateway-specific error such as `provider_timeout_504` should not become a core
 ## Related docs
 
 - `examples/subscription-renewal/04-workflows-and-state.md`
+- `context/patterns/03-error-and-edge-translation-patterns.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
 - `context/review/02-architecture-review-checklist.md`
