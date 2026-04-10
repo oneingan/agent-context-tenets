@@ -18,7 +18,7 @@ entries:
       - ddd
     next_reads:
       - context/playbooks/02-bounded-context-definition-playbook.md
-      - context/playbooks/03-workflow-and-state-modeling-playbook.md
+      - context/playbooks/05-trusted-and-untrusted-representations-playbook.md
 
   - path: context/playbooks/02-bounded-context-definition-playbook.md
     title: Bounded Context Definition Playbook
@@ -33,6 +33,7 @@ entries:
       - bounded-contexts
       - boundaries
     next_reads:
+      - context/playbooks/06-entity-value-object-and-aggregate-design-playbook.md
       - context/review/02-architecture-review-checklist.md
 
   - path: context/playbooks/03-workflow-and-state-modeling-playbook.md
@@ -48,7 +49,7 @@ entries:
       - workflows
       - state
     next_reads:
-      - context/principles/04-workflows-invariants-and-state.md
+      - context/principles/09-workflow-pipelines-effects-and-dependencies.md
       - context/review/02-architecture-review-checklist.md
 
   - path: context/playbooks/04-adr-writing-playbook.md
@@ -66,3 +67,51 @@ entries:
     next_reads:
       - docs/adr/0002-information-architecture-and-manifests.md
       - context/review/01-quality-gates.md
+
+  - path: context/playbooks/05-trusted-and-untrusted-representations-playbook.md
+    title: Trusted and Untrusted Representations Playbook
+    canonical: true
+    summary: Guides the explicit transition from raw inputs to trusted domain representations.
+    load_when:
+      - modeling input trust boundaries
+      - reducing repeated validation
+      - clarifying trusted construction rules
+    tags:
+      - playbook
+      - validation
+      - trusted-data
+    next_reads:
+      - context/principles/07-type-shaped-models-and-illegal-states.md
+      - examples/subscription-renewal/06-trusted-and-untrusted-representations.md
+
+  - path: context/playbooks/06-entity-value-object-and-aggregate-design-playbook.md
+    title: Entity, Value Object, and Aggregate Design Playbook
+    canonical: true
+    summary: Guides identity decisions, value-object identification, and aggregate boundary selection.
+    load_when:
+      - classifying concepts
+      - deciding aggregate boundaries
+      - reviewing invariant ownership
+    tags:
+      - playbook
+      - entities
+      - aggregates
+    next_reads:
+      - context/principles/08-entities-value-objects-and-aggregates.md
+      - examples/subscription-renewal/07-aggregate-and-ownership-boundaries.md
+
+  - path: context/playbooks/07-persistence-and-mapping-boundaries-playbook.md
+    title: Persistence and Mapping Boundaries Playbook
+    canonical: true
+    summary: Guides the separation of domain shapes from storage and wire shapes and clarifies data ownership.
+    load_when:
+      - defining persistence boundaries
+      - adding mapping logic
+      - reviewing storage-first distortions
+    tags:
+      - playbook
+      - persistence
+      - mapping
+    next_reads:
+      - context/principles/10-serialization-persistence-and-data-ownership.md
+      - examples/subscription-renewal/08-persistence-and-mapping-boundaries.md

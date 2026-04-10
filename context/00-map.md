@@ -31,22 +31,26 @@ Read:
 2. `context/principles/07-type-shaped-models-and-illegal-states.md`
 3. `context/principles/08-entities-value-objects-and-aggregates.md`
 4. `context/principles/03-bounded-contexts-and-boundaries.md`
+5. `context/playbooks/05-trusted-and-untrusted-representations-playbook.md`
 
 ### Model workflow behavior, effects, or state changes
 Read:
 1. `context/principles/04-workflows-invariants-and-state.md`
 2. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
-3. `context/principles/05-errors-and-edge-responsibilities.md`
+3. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
+4. `context/principles/05-errors-and-edge-responsibilities.md`
 
 ### Integrate persistence or revisit data ownership
 Read:
 1. `context/principles/10-serialization-persistence-and-data-ownership.md`
-2. `context/patterns/03-error-and-edge-translation-patterns.md`
+2. `context/playbooks/07-persistence-and-mapping-boundaries-playbook.md`
+3. `context/patterns/03-error-and-edge-translation-patterns.md`
 
 ### Evolve the model after requirement changes
 Read:
 1. `context/principles/11-evolving-models-through-change.md`
 2. `context/playbooks/04-adr-writing-playbook.md`
+3. `examples/subscription-renewal/09-change-scenarios.md`
 
 ### Review docs or designs
 Read:
@@ -58,14 +62,15 @@ Read:
 Read:
 1. `examples/00-map.md`
 2. `examples/subscription-renewal/00-map.md`
-3. the smallest relevant pseudocode file
+3. the smallest relevant example note or pseudocode file
 
 ### Decide how examples should behave
 Read:
 1. `docs/adr/0001-example-strategy.md`
 2. `context/patterns/04-example-linking-patterns.md`
 3. `context/review/04-example-acceptance-criteria.md`
-4. `examples/README.md`
+4. `docs/adr/0007-defer-second-exemplar-domain.md`
+5. `examples/README.md`
 
 ## Areas
 

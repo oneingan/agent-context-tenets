@@ -83,13 +83,14 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/adr/0004-lightweight-validation-before-agent-exports.md` — tooling strategy
 - `docs/adr/0005-v0-name-and-publication-baseline.md` — v0 naming and publication baseline
 - `docs/adr/0006-license-choice.md` — repository license choice
+- `docs/adr/0007-defer-second-exemplar-domain.md` — why a second exemplar is deferred for now
 
 ### Canonical layers available now
 
 - `context/principles/00-map.md` — canonical design rules, including deeper DMMF-focused docs
 - `context/patterns/00-map.md` — reusable solution shapes
 - `context/glossary/00-map.md` — vocabulary and naming governance
-- `context/playbooks/00-map.md` — task-oriented procedures
+- `context/playbooks/00-map.md` — task-oriented procedures, including deeper DMMF-focused execution playbooks
 - `context/review/00-map.md` — quality gates and checklists
 
 ### Secondary example area available now
@@ -141,7 +142,7 @@ The repository now includes:
 - glossary and naming governance
 - playbooks for domain modeling, boundaries, workflows, and ADRs
 - review checklists and repo quality gates
-- a first exemplar domain: subscription renewal
+- a first exemplar domain: subscription renewal, now deepened with trust boundaries, aggregate decisions, persistence boundaries, and change scenarios
 - lightweight validation scripts for manifests and doc budgets
 - contribution guidance and CI validation
 - context maps, manifests, and templates
@@ -150,7 +151,7 @@ The repository now includes:
 ## Recommended next steps
 
 - deepen playbooks and examples where the new DMMF-focused principles expose gaps
-- experiment with additional exemplar domains only if they teach new lessons
+- experiment with additional exemplar domains only if they teach genuinely new lessons
 - revisit export automation later if manual reuse becomes painful
 - add polyglot micro-examples only when a language-specific lesson is worth the extra context
 - see `CONTRIBUTING.md` and `docs/publication-and-maintenance.md` for maintenance guidance

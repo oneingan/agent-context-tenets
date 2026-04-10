@@ -43,6 +43,7 @@ entries:
       - bounded-contexts
       - subscription-renewal
     next_reads:
+      - examples/subscription-renewal/07-aggregate-and-ownership-boundaries.md
       - examples/subscription-renewal/04-workflows-and-state.md
 
   - path: examples/subscription-renewal/04-workflows-and-state.md
@@ -57,6 +58,7 @@ entries:
       - state
     next_reads:
       - examples/subscription-renewal/05-invariants-and-failure-model.md
+      - examples/subscription-renewal/06-trusted-and-untrusted-representations.md
       - examples/subscription-renewal/pseudocode/renew-subscription.md
 
   - path: examples/subscription-renewal/05-invariants-and-failure-model.md
@@ -70,7 +72,61 @@ entries:
       - invariants
       - failures
     next_reads:
+      - examples/subscription-renewal/06-trusted-and-untrusted-representations.md
       - examples/subscription-renewal/pseudocode/process-billing-outcome.md
+
+  - path: examples/subscription-renewal/06-trusted-and-untrusted-representations.md
+    title: Subscription Renewal Trusted and Untrusted Representations
+    summary: Shows where the example narrows raw inputs into trusted domain representations.
+    load_when:
+      - understanding trust boundaries in the example
+      - comparing raw vs trusted shapes
+    tags:
+      - example
+      - trusted-data
+      - validation
+    next_reads:
+      - examples/subscription-renewal/07-aggregate-and-ownership-boundaries.md
+      - examples/subscription-renewal/08-persistence-and-mapping-boundaries.md
+
+  - path: examples/subscription-renewal/07-aggregate-and-ownership-boundaries.md
+    title: Subscription Renewal Aggregate and Ownership Boundaries
+    summary: Shows identity, value-object, and aggregate-boundary decisions in the example.
+    load_when:
+      - understanding aggregate boundaries
+      - reviewing ownership and invariant protection
+    tags:
+      - example
+      - aggregates
+      - ownership
+    next_reads:
+      - examples/subscription-renewal/08-persistence-and-mapping-boundaries.md
+
+  - path: examples/subscription-renewal/08-persistence-and-mapping-boundaries.md
+    title: Subscription Renewal Persistence and Mapping Boundaries
+    summary: Shows data ownership and mapping boundaries across lifecycle, billing, and notifications.
+    load_when:
+      - understanding storage and mapping choices in the example
+      - comparing data ownership boundaries
+    tags:
+      - example
+      - persistence
+      - mapping
+    next_reads:
+      - examples/subscription-renewal/09-change-scenarios.md
+
+  - path: examples/subscription-renewal/09-change-scenarios.md
+    title: Subscription Renewal Change Scenarios
+    summary: Shows how requirement changes ripple through language, model, workflows, and mappings.
+    load_when:
+      - exploring model evolution
+      - reviewing where changes should land first
+    tags:
+      - example
+      - change
+      - evolution
+    next_reads:
+      - context/principles/11-evolving-models-through-change.md
 
   - path: examples/subscription-renewal/pseudocode/renew-subscription.md
     title: Pseudocode — Renew Subscription

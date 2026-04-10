@@ -10,6 +10,16 @@ Read:
 2. `context/principles/02-ubiquitous-language-and-naming.md`
 3. `context/principles/03-bounded-contexts-and-boundaries.md`
 
+### If you need to model trusted vs untrusted data
+Read:
+1. `context/playbooks/05-trusted-and-untrusted-representations-playbook.md`
+2. `context/principles/07-type-shaped-models-and-illegal-states.md`
+
+### If you need to classify entities, value objects, or aggregates
+Read:
+1. `context/playbooks/06-entity-value-object-and-aggregate-design-playbook.md`
+2. `context/principles/08-entities-value-objects-and-aggregates.md`
+
 ### If you need to define a bounded context
 Read:
 1. `context/playbooks/02-bounded-context-definition-playbook.md`
@@ -19,7 +29,12 @@ Read:
 Read:
 1. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
 2. `context/principles/04-workflows-invariants-and-state.md`
-3. `context/principles/05-errors-and-edge-responsibilities.md`
+3. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
+
+### If you need to design persistence and mapping boundaries
+Read:
+1. `context/playbooks/07-persistence-and-mapping-boundaries-playbook.md`
+2. `context/principles/10-serialization-persistence-and-data-ownership.md`
 
 ### If you need to record a structural decision
 Read:
@@ -36,6 +51,12 @@ Read:
   - how to model behavior, states, invariants, and failure modes
 - `04-adr-writing-playbook.md`
   - how to capture a meaningful architectural decision
+- `05-trusted-and-untrusted-representations-playbook.md`
+  - how to move raw inputs into trusted domain representations
+- `06-entity-value-object-and-aggregate-design-playbook.md`
+  - how to classify concepts and choose aggregate boundaries
+- `07-persistence-and-mapping-boundaries-playbook.md`
+  - how to keep storage and wire shapes from owning the model
 
 ## Directory rules
 
