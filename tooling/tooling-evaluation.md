@@ -65,7 +65,16 @@ Recommended future export targets:
 - Copilot instruction export
 - Cursor rule export
 
-### 5. Complexity management rule
+### 5. CI warning and noise management
+
+CI should stay aligned with the local checks and avoid optional steps that create noisy external-service warnings without enough value for a small repository.
+
+Current stance:
+- keep checkout current
+- pin action versions instead of following floating `@main`
+- avoid cache steps that add warning noise or external auth requirements unless the speedup clearly matters
+
+### 6. Complexity management rule
 
 If a tool does not clearly reduce retrieval cost, validation risk, or maintenance burden, defer it.
 
