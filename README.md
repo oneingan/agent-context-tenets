@@ -80,6 +80,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/adr/0003-first-exemplar-domain-subscription-renewal.md` — rationale for the first worked example
 - `docs/adr/0004-lightweight-validation-before-agent-exports.md` — tooling strategy
 - `docs/adr/0005-v0-name-and-publication-baseline.md` — v0 naming and publication baseline
+- `docs/adr/0006-license-choice.md` — repository license choice
 
 ### Canonical layers available now
 
@@ -112,6 +113,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `context/manifests/playbooks-manifest.yaml` — playbook index
 - `context/manifests/review-manifest.yaml` — review index
 - `context/manifests/examples-manifest.yaml` — examples index
+- `LICENSE` — MIT license for v0
 - `.pi/todos/` — implementation backlog for the repo itself
 
 ## Success criteria for v0
@@ -144,8 +146,8 @@ The repository now includes:
 
 ## Recommended next steps
 
-- choose a license if you intend to publish the repository publicly
 - add the GitHub remote and push when ready
+- verify GitHub Actions after the first push
 - experiment with additional exemplar domains only if they teach new lessons
 - revisit export automation later if manual reuse becomes painful
 - add polyglot micro-examples only when a language-specific lesson is worth the extra context

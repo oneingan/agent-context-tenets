@@ -132,6 +132,8 @@ canonical_documents:
     topic: lightweight-tooling-strategy
   - path: docs/adr/0005-v0-name-and-publication-baseline.md
     topic: v0-publication-baseline
+  - path: docs/adr/0006-license-choice.md
+    topic: license-choice
 
 size_budgets:
   root_docs_max_lines: 200

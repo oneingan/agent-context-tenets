@@ -14,7 +14,7 @@
 - [x] local validation scripts added
 - [x] CI workflow added
 - [x] publication baseline recorded in an ADR
-- [ ] choose a license if public release requires one
+- [x] choose and add a license
 - [ ] add a GitHub remote and push when ready
 
 ## Local validation
@@ -40,7 +40,9 @@ git push -u origin main
 
 ## Related docs
 
+- `LICENSE`
 - `CONTRIBUTING.md`
 - `tooling/tooling-evaluation.md`
 - `docs/adr/0004-lightweight-validation-before-agent-exports.md`
 - `docs/adr/0005-v0-name-and-publication-baseline.md`
+- `docs/adr/0006-license-choice.md`
