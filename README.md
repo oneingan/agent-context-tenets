@@ -74,10 +74,12 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/repository-plan.md` — implementation roadmap
 - `docs/research/source-synthesis.md` — distilled design inputs
 - `docs/research/context-window-strategy.md` — large-repo operating model for agents
+- `docs/publication-and-maintenance.md` — publication baseline and push checklist
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
 - `docs/adr/0003-first-exemplar-domain-subscription-renewal.md` — rationale for the first worked example
 - `docs/adr/0004-lightweight-validation-before-agent-exports.md` — tooling strategy
+- `docs/adr/0005-v0-name-and-publication-baseline.md` — v0 naming and publication baseline
 
 ### Canonical layers available now
 
@@ -99,6 +101,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `tooling/validate-manifests.sh`
 - `tooling/check-doc-budgets.sh`
 - `tooling/tooling-evaluation.md`
+- `.github/workflows/validate.yml`
 
 ### Operational files
 
@@ -127,7 +130,7 @@ The repository now includes:
 
 - git initialization and commits
 - planning and research documents
-- ADRs for example strategy, information architecture, exemplar-domain choice, and lightweight tooling strategy
+- ADRs for example strategy, information architecture, exemplar-domain choice, tooling strategy, and publication baseline
 - canonical principles derived from the source books
 - reusable patterns for boundaries, workflows, errors, and example linking
 - glossary and naming governance
@@ -135,11 +138,15 @@ The repository now includes:
 - review checklists and repo quality gates
 - a first exemplar domain: subscription renewal
 - lightweight validation scripts for manifests and doc budgets
+- contribution guidance and CI validation
 - context maps, manifests, and templates
 - `/todos`-based implementation backlog stored in-repo
 
 ## Recommended next steps
 
+- choose a license if you intend to publish the repository publicly
+- add the GitHub remote and push when ready
 - experiment with additional exemplar domains only if they teach new lessons
 - revisit export automation later if manual reuse becomes painful
 - add polyglot micro-examples only when a language-specific lesson is worth the extra context
+- see `CONTRIBUTING.md` and `docs/publication-and-maintenance.md` for maintenance guidance

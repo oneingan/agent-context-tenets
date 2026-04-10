@@ -11,3 +11,4 @@ Current tools:
 Current stance:
 - implement lightweight validation now
 - defer heavy export automation until the corpus is more stable
+- keep CI aligned with the local `tooling/run-checks.sh` command

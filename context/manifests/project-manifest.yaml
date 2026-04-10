@@ -1,6 +1,6 @@
 repo:
   name: agent-context-tenets
-  status: phase-4-active
+  status: v0-ready
   purpose: >-
     A reusable, language-agnostic AI agent context framework optimized for
     progressive loading under limited context windows.
@@ -130,6 +130,8 @@ canonical_documents:
     topic: first-exemplar-domain
   - path: docs/adr/0004-lightweight-validation-before-agent-exports.md
     topic: lightweight-tooling-strategy
+  - path: docs/adr/0005-v0-name-and-publication-baseline.md
+    topic: v0-publication-baseline
 
 size_budgets:
   root_docs_max_lines: 200
@@ -143,3 +145,4 @@ policies:
   link_instead_of_duplicate: true
   update_maps_and_manifests_with_canonical_changes: true
   lightweight_validation_before_heavy_exports: true
+  add_new_exemplar_domains_only_for_new_lessons: true
