@@ -1,6 +1,6 @@
 repo:
   name: agent-context-tenets
-  status: v0-ready
+  status: iteration-2-active
   purpose: >-
     A reusable, language-agnostic AI agent context framework optimized for
     progressive loading under limited context windows.
@@ -30,10 +30,6 @@ areas:
     role: reusable-structures
     map: context/patterns/00-map.md
     manifest: context/manifests/patterns-manifest.yaml
-    load_when:
-      - comparing design options
-      - modeling workflows or boundaries
-      - selecting decomposition patterns
     status: active
 
   - path: context/glossary
@@ -68,10 +64,6 @@ areas:
   - path: tooling
     role: validation-and-evaluation
     canonical: false
-    load_when:
-      - validating repo structure
-      - checking doc budgets
-      - evaluating future export automation
     status: active
 
   - path: docs/research
@@ -92,6 +84,16 @@ canonical_documents:
     topic: errors-and-edges
   - path: context/principles/06-deep-modules-and-information-hiding.md
     topic: complexity-and-structure
+  - path: context/principles/07-type-shaped-models-and-illegal-states.md
+    topic: type-shaped-models
+  - path: context/principles/08-entities-value-objects-and-aggregates.md
+    topic: entities-values-aggregates
+  - path: context/principles/09-workflow-pipelines-effects-and-dependencies.md
+    topic: workflow-pipelines-and-effects
+  - path: context/principles/10-serialization-persistence-and-data-ownership.md
+    topic: persistence-and-data-ownership
+  - path: context/principles/11-evolving-models-through-change.md
+    topic: model-evolution
   - path: context/patterns/01-boundary-and-decomposition-patterns.md
     topic: boundary-patterns
   - path: context/patterns/02-workflow-and-state-transition-patterns.md

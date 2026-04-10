@@ -11,12 +11,23 @@ Read:
 1. `01-information-architecture-and-manifests.md`
 2. `06-deep-modules-and-information-hiding.md`
 
-### If you are modeling a domain
+### If you are modeling a domain deeply
 Read:
 1. `02-ubiquitous-language-and-naming.md`
-2. `03-bounded-contexts-and-boundaries.md`
-3. `04-workflows-invariants-and-state.md`
-4. `05-errors-and-edge-responsibilities.md`
+2. `07-type-shaped-models-and-illegal-states.md`
+3. `08-entities-value-objects-and-aggregates.md`
+4. `03-bounded-contexts-and-boundaries.md`
+
+### If you are modeling workflows and effects
+Read:
+1. `04-workflows-invariants-and-state.md`
+2. `09-workflow-pipelines-effects-and-dependencies.md`
+3. `05-errors-and-edge-responsibilities.md`
+
+### If you are integrating persistence or evolving the model
+Read:
+1. `10-serialization-persistence-and-data-ownership.md`
+2. `11-evolving-models-through-change.md`
 
 ### If you are reviewing proposed changes
 Read:
@@ -38,6 +49,16 @@ Read:
   - how to make failure modes explicit and keep edge concerns at the edges
 - `06-deep-modules-and-information-hiding.md`
   - how to keep the knowledge base deep, compact, and low-friction to retrieve
+- `07-type-shaped-models-and-illegal-states.md`
+  - how trusted representations and narrow types keep domain meaning explicit
+- `08-entities-value-objects-and-aggregates.md`
+  - how to distinguish identity, value, and consistency boundaries
+- `09-workflow-pipelines-effects-and-dependencies.md`
+  - how to compose workflows from explicit steps, effects, and dependencies
+- `10-serialization-persistence-and-data-ownership.md`
+  - how to keep storage and transport from owning the model
+- `11-evolving-models-through-change.md`
+  - how to revisit the model first when requirements change
 
 ## Directory rules
 
@@ -52,5 +73,5 @@ Read:
 - `context/00-map.md`
 - `context/manifests/project-manifest.yaml`
 - `context/manifests/principles-manifest.yaml`
-- `docs/adr/0001-example-strategy.md`
-- `docs/adr/0002-information-architecture-and-manifests.md`
+- `docs/research/dmmf-deep-synthesis.md`
+- `docs/research/aposd-follow-up-notes-for-dmmf-iteration.md`

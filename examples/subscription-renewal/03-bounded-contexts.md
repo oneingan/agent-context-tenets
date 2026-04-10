@@ -71,3 +71,5 @@ Keeping these separate protects the core model from edge churn.
 - `examples/subscription-renewal/04-workflows-and-state.md`
 - `context/patterns/01-boundary-and-decomposition-patterns.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`
+- `context/principles/08-entities-value-objects-and-aggregates.md`
+- `context/principles/10-serialization-persistence-and-data-ownership.md`

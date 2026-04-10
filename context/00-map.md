@@ -25,24 +25,28 @@ Read:
 1. `context/patterns/00-map.md`
 2. the smallest relevant pattern doc for boundaries, workflows, errors, or examples
 
-### Model a domain or capability
+### Model a domain deeply
 Read:
-1. `context/playbooks/01-domain-modeling-playbook.md`
-2. `context/principles/02-ubiquitous-language-and-naming.md`
-3. `context/principles/03-bounded-contexts-and-boundaries.md`
-4. `context/principles/04-workflows-invariants-and-state.md`
+1. `docs/research/dmmf-deep-synthesis.md`
+2. `context/principles/07-type-shaped-models-and-illegal-states.md`
+3. `context/principles/08-entities-value-objects-and-aggregates.md`
+4. `context/principles/03-bounded-contexts-and-boundaries.md`
 
-### Define a bounded context
+### Model workflow behavior, effects, or state changes
 Read:
-1. `context/playbooks/02-bounded-context-definition-playbook.md`
-2. `context/patterns/01-boundary-and-decomposition-patterns.md`
-3. `context/review/02-architecture-review-checklist.md`
-
-### Model workflow behavior or state changes
-Read:
-1. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
-2. `context/patterns/02-workflow-and-state-transition-patterns.md`
+1. `context/principles/04-workflows-invariants-and-state.md`
+2. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
 3. `context/principles/05-errors-and-edge-responsibilities.md`
+
+### Integrate persistence or revisit data ownership
+Read:
+1. `context/principles/10-serialization-persistence-and-data-ownership.md`
+2. `context/patterns/03-error-and-edge-translation-patterns.md`
+
+### Evolve the model after requirement changes
+Read:
+1. `context/principles/11-evolving-models-through-change.md`
+2. `context/playbooks/04-adr-writing-playbook.md`
 
 ### Review docs or designs
 Read:

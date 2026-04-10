@@ -95,3 +95,5 @@
 - `examples/subscription-renewal/pseudocode/process-billing-outcome.md`
 - `context/patterns/02-workflow-and-state-transition-patterns.md`
 - `context/principles/04-workflows-invariants-and-state.md`
+- `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
+- `context/principles/11-evolving-models-through-change.md`

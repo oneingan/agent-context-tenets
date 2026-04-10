@@ -48,3 +48,7 @@ Subscription renewal is a good first exemplar because it demonstrates:
 - `context/principles/03-bounded-contexts-and-boundaries.md`
 - `context/principles/04-workflows-invariants-and-state.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
+- `context/principles/07-type-shaped-models-and-illegal-states.md`
+- `context/principles/08-entities-value-objects-and-aggregates.md`
+- `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
+- `context/principles/10-serialization-persistence-and-data-ownership.md`

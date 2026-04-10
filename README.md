@@ -74,6 +74,8 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/repository-plan.md` — implementation roadmap
 - `docs/research/source-synthesis.md` — distilled design inputs
 - `docs/research/context-window-strategy.md` — large-repo operating model for agents
+- `docs/research/dmmf-deep-synthesis.md` — deeper DMMF chapter-to-framework mapping
+- `docs/research/aposd-follow-up-notes-for-dmmf-iteration.md` — APOSD notes supporting the DMMF-heavy iteration
 - `docs/publication-and-maintenance.md` — publication baseline and push checklist
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
@@ -84,7 +86,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 
 ### Canonical layers available now
 
-- `context/principles/00-map.md` — canonical design rules
+- `context/principles/00-map.md` — canonical design rules, including deeper DMMF-focused docs
 - `context/patterns/00-map.md` — reusable solution shapes
 - `context/glossary/00-map.md` — vocabulary and naming governance
 - `context/playbooks/00-map.md` — task-oriented procedures
@@ -132,8 +134,9 @@ The repository now includes:
 
 - git initialization and commits
 - planning and research documents
-- ADRs for example strategy, information architecture, exemplar-domain choice, tooling strategy, and publication baseline
+- ADRs for example strategy, information architecture, exemplar-domain choice, tooling strategy, publication baseline, and license choice
 - canonical principles derived from the source books
+- a deeper second-pass DMMF synthesis with more granular principle docs
 - reusable patterns for boundaries, workflows, errors, and example linking
 - glossary and naming governance
 - playbooks for domain modeling, boundaries, workflows, and ADRs
@@ -146,8 +149,7 @@ The repository now includes:
 
 ## Recommended next steps
 
-- add the GitHub remote and push when ready
-- verify GitHub Actions after the first push
+- deepen playbooks and examples where the new DMMF-focused principles expose gaps
 - experiment with additional exemplar domains only if they teach new lessons
 - revisit export automation later if manual reuse becomes painful
 - add polyglot micro-examples only when a language-specific lesson is worth the extra context
