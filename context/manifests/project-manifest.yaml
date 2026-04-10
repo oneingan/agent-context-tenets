@@ -1,6 +1,6 @@
 repo:
   name: agent-context-tenets
-  status: phase-2-active
+  status: phase-3-active
   purpose: >-
     A reusable, language-agnostic AI agent context framework optimized for
     progressive loading under limited context windows.
@@ -17,7 +17,7 @@ loading_order:
   - nearest area map or manifest
   - smallest relevant canonical leaf docs
   - docs/adr/*.md as needed
-  - examples/ only when canonical docs are insufficient
+  - examples/ only when canonical docs are insufficient or when an exemplar is explicitly needed
 
 areas:
   - path: context/principles
@@ -67,6 +67,17 @@ areas:
       - modeling workflows or boundaries
       - selecting decomposition patterns
     status: planned
+
+  - path: examples
+    role: secondary-illustrations
+    map: examples/00-map.md
+    manifest: context/manifests/examples-manifest.yaml
+    canonical: false
+    load_when:
+      - you want a worked example
+      - you need pseudocode after reading the canonical docs
+      - you are comparing framework principles with one exemplar domain
+    status: active
 
   - path: context/manifests
     role: retrieval-metadata
@@ -123,6 +134,8 @@ canonical_documents:
     topic: examples-policy
   - path: docs/adr/0002-information-architecture-and-manifests.md
     topic: structure-decision
+  - path: docs/adr/0003-first-exemplar-domain-subscription-renewal.md
+    topic: first-exemplar-domain
 
 size_budgets:
   root_docs_max_lines: 200

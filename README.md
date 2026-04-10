@@ -75,6 +75,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/research/context-window-strategy.md` — large-repo operating model for agents
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
+- `docs/adr/0003-first-exemplar-domain-subscription-renewal.md` — rationale for the first worked example
 
 ### Canonical layers available now
 
@@ -83,6 +84,11 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `context/playbooks/00-map.md` — task-oriented procedures
 - `context/review/00-map.md` — quality gates and checklists
 
+### Secondary example area available now
+
+- `examples/00-map.md` — example entrypoint
+- `examples/subscription-renewal/00-map.md` — first exemplar domain
+
 ### Operational files
 
 - `context/manifests/project-manifest.yaml` — machine-readable load map
@@ -90,6 +96,7 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `context/manifests/glossary-manifest.yaml` — glossary index
 - `context/manifests/playbooks-manifest.yaml` — playbook index
 - `context/manifests/review-manifest.yaml` — review index
+- `context/manifests/examples-manifest.yaml` — examples index
 - `.pi/todos/` — implementation backlog for the repo itself
 
 ## Success criteria for v0
@@ -108,16 +115,17 @@ The repository now includes:
 
 - git initialization and commits
 - planning and research documents
-- ADRs for example strategy and information architecture
+- ADRs for example strategy, information architecture, and exemplar-domain choice
 - canonical principles derived from the source books
 - glossary and naming governance
 - playbooks for domain modeling, boundaries, workflows, and ADRs
 - review checklists and repo quality gates
+- a first exemplar domain: subscription renewal
 - context maps, manifests, and templates
 - `/todos`-based implementation backlog stored in-repo
 
 ## Recommended next steps
 
-- choose a first exemplar domain for pseudocode-first examples
 - add pattern docs for recurrent solution shapes
 - evaluate lightweight tooling for manifest validation and doc linting
+- add polyglot micro-examples later only when a language-specific lesson is worth the extra context

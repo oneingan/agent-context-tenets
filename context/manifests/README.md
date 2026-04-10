@@ -8,6 +8,7 @@ Start with:
 - `glossary-manifest.yaml`
 - `playbooks-manifest.yaml`
 - `review-manifest.yaml`
+- `examples-manifest.yaml`
 
 Rules:
 - keep keys simple and stable

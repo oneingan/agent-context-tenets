@@ -43,6 +43,12 @@ Read:
 2. `context/review/03-documentation-quality-checklist.md`
 3. `context/review/05-vocabulary-drift-checklist.md`
 
+### See one worked example
+Read:
+1. `examples/00-map.md`
+2. `examples/subscription-renewal/00-map.md`
+3. the smallest relevant pseudocode file
+
 ### Decide how examples should behave
 Read:
 1. `docs/adr/0001-example-strategy.md`
@@ -84,6 +90,13 @@ Reusable structures such as boundaries, workflows, errors, state transitions, in
 
 Current state: planned.
 
+### `examples/`
+Secondary, pseudocode-first illustrations.
+
+Entry docs:
+- `examples/00-map.md`
+- `context/manifests/examples-manifest.yaml`
+
 ### `manifests/`
 Machine-readable retrieval metadata.
 
@@ -97,7 +110,7 @@ Current entry docs:
 - summary first
 - link instead of duplicating
 - prefer tables, checklists, state descriptions, and short examples over long prose
-- update maps and manifests when adding new canonical docs
+- update maps and manifests when adding new canonical docs or new major example areas
 
 ## Current canonical layers available now
 
@@ -105,3 +118,7 @@ Current entry docs:
 - glossary
 - playbooks
 - review
+
+## Current secondary example area
+
+- subscription renewal
