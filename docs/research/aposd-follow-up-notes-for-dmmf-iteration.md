@@ -87,3 +87,90 @@ This APOSD pass does not require a brand new layer. It mainly requires:
 
 DMMF provides many of the modeling moves for this iteration.
 APOSD tells us how to keep those moves from becoming a sprawling, hard-to-navigate corpus.
+
+## v0.2.0 targeted reread findings
+
+A targeted reread of the most relevant APOSD chapters reinforced that the next iteration should focus less on adding more theory and more on making the important modeling artifacts obvious, consistent, and easy to review.
+
+### 1. Design the artifact shapes twice
+
+The most direct v0.2.0 lesson from APOSD is to compare multiple artifact decompositions before standardizing one.
+That applies to:
+- event catalogs
+- trust-boundary tables
+- cross-context contracts
+- change-impact notes
+
+Repo implication:
+- prefer small, explicit templates over one oversized catch-all modeling document
+- compare artifact purposes so each new doc earns its own abstraction level
+
+### 2. Names act like lightweight abstractions
+
+The naming reread reinforced that names do real design work.
+For v0.2.0, this matters especially for:
+- event names
+- failure categories
+- contract labels
+- translated terms across seams
+
+Repo implication:
+- prefer names that create a precise mental image
+- avoid vague labels such as `result`, `status`, or `integration payload`
+- use consistent term pairs across examples and templates
+
+### 3. Consistency should be enforced, not merely hoped for
+
+APOSD's consistency chapter maps directly to repo governance.
+If new artifact types are introduced, they need:
+- stable names
+- repeatable table shapes
+- clear places in maps and manifests
+- review checklists that make drift visible
+
+Repo implication:
+- add a review artifact for event and contract documents
+- update maps and manifests in the same iteration as the new docs
+- keep templates aligned with the retrieval structure
+
+### 4. Obviousness matters more for event-driven and cross-context material
+
+APOSD's guidance on obviousness is especially relevant when control flow or meaning is indirect.
+Events, contracts, retries, and asynchronous seams become hard to reason about when readers must infer too much.
+
+Repo implication:
+- prefer compact tables that show emitters, consumers, translations, and failure envelopes
+- make workflow handoffs explicit rather than leaving them implied in prose
+- use review checklists to catch hidden assumptions
+
+### 5. Decide what matters and hide the rest
+
+The v0.2.0 reread strongly supports a DMMF-compatible rule:
+- what matters: domain events, stable outcomes, ownership, translations, invariants
+- what should be hidden: vendor payload detail, transport trivia, operational noise that does not change business meaning
+
+Repo implication:
+- contract templates should emphasize meaning and ownership first
+- edge-specific detail should appear only where needed for translation or review
+
+### 6. Deep modules still apply to the documentation corpus itself
+
+APOSD's deep-module idea is not just about runtime code.
+In this repo it means:
+- maps should stay small
+- leaf docs should do one thing well
+- templates should reduce repeated explanatory overhead
+- examples should remain secondary evidence rather than silently becoming the real specification
+
+Repo implication:
+- v0.2.0 should add new leaf docs and templates, but avoid a new sprawling top-level layer
+
+## Impact on v0.2.0 packaging
+
+The targeted reread supports the v0.2.0 packaging strategy:
+- a few sharper playbooks
+- a few reusable templates
+- one richer worked example
+- review and manifest updates that keep the new material obvious
+
+In other words, APOSD continues to argue for **depth with controlled surface area** rather than breadth.

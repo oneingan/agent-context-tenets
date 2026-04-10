@@ -103,6 +103,7 @@ Edge steps:
 
 ## Related docs
 
+- `context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md`
 - `context/principles/04-workflows-invariants-and-state.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
 - `context/review/02-architecture-review-checklist.md`

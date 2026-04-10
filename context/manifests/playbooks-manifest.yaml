@@ -17,6 +17,7 @@ entries:
       - domain-modeling
       - ddd
     next_reads:
+      - context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md
       - context/playbooks/02-bounded-context-definition-playbook.md
       - context/playbooks/05-trusted-and-untrusted-representations-playbook.md
 
@@ -33,6 +34,7 @@ entries:
       - bounded-contexts
       - boundaries
     next_reads:
+      - context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md
       - context/playbooks/06-entity-value-object-and-aggregate-design-playbook.md
       - context/review/02-architecture-review-checklist.md
 
@@ -49,6 +51,7 @@ entries:
       - workflows
       - state
     next_reads:
+      - context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md
       - context/principles/09-workflow-pipelines-effects-and-dependencies.md
       - context/review/02-architecture-review-checklist.md
 
@@ -113,5 +116,56 @@ entries:
       - persistence
       - mapping
     next_reads:
+      - context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md
       - context/principles/10-serialization-persistence-and-data-ownership.md
       - examples/subscription-renewal/08-persistence-and-mapping-boundaries.md
+
+  - path: context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md
+    title: Business Event Discovery and Event Catalog Playbook
+    canonical: true
+    summary: Guides the extraction of business events from narratives and the creation of compact event catalogs.
+    load_when:
+      - discovering business events
+      - building an event catalog
+      - clarifying workflow handoffs
+    tags:
+      - playbook
+      - events
+      - event-catalog
+    next_reads:
+      - context/principles/04-workflows-invariants-and-state.md
+      - examples/subscription-renewal/10-event-catalog.md
+
+  - path: context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md
+    title: Domain Error and Failure Taxonomy Playbook
+    canonical: true
+    summary: Guides the classification of failures by meaning and the design of stable failure envelopes.
+    load_when:
+      - defining workflow failures
+      - reviewing error surfaces
+      - separating domain and operational concerns
+    tags:
+      - playbook
+      - errors
+      - failure-taxonomy
+    next_reads:
+      - context/principles/05-errors-and-edge-responsibilities.md
+      - context/patterns/03-error-and-edge-translation-patterns.md
+      - examples/subscription-renewal/05-invariants-and-failure-model.md
+
+  - path: context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md
+    title: Cross-Context Contract and Anti-Corruption Playbook
+    canonical: true
+    summary: Guides the design of explicit seam contracts, translation boundaries, and ownership notes between contexts.
+    load_when:
+      - defining context-to-context communication
+      - documenting anti-corruption seams
+      - reviewing translated interactions
+    tags:
+      - playbook
+      - contracts
+      - anti-corruption
+    next_reads:
+      - context/principles/03-bounded-contexts-and-boundaries.md
+      - context/principles/10-serialization-persistence-and-data-ownership.md
+      - examples/subscription-renewal/11-context-contracts.md

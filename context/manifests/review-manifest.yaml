@@ -22,7 +22,7 @@ entries:
   - path: context/review/02-architecture-review-checklist.md
     title: Architecture Review Checklist
     canonical: true
-    summary: Evaluates boundaries, workflows, errors, and retrieval structure.
+    summary: Evaluates boundaries, workflows, errors, contracts, and retrieval structure.
     load_when:
       - auditing context packs
       - reviewing exemplar domains
@@ -32,6 +32,7 @@ entries:
       - architecture
       - checklist
     next_reads:
+      - context/review/06-event-and-contract-artifact-checklist.md
       - context/principles/00-map.md
 
   - path: context/review/03-documentation-quality-checklist.md
@@ -77,3 +78,19 @@ entries:
     next_reads:
       - context/glossary/01-framework-glossary.md
       - context/glossary/02-naming-and-term-introduction.md
+
+  - path: context/review/06-event-and-contract-artifact-checklist.md
+    title: Event and Contract Artifact Checklist
+    canonical: true
+    summary: Evaluates event catalogs, trust-boundary notes, and cross-context contract artifacts.
+    load_when:
+      - reviewing event catalogs
+      - reviewing trust boundaries
+      - reviewing context-to-context contracts
+    tags:
+      - review
+      - events
+      - contracts
+    next_reads:
+      - context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md
+      - context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md

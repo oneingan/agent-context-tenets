@@ -4,7 +4,7 @@
 
 - The example makes correctness rules explicit rather than leaving them implicit in code.
 - Invariants protect the meaning of subscription state and renewal outcomes.
-- Failures are grouped into domain-significant, contract, and operational categories.
+- Failures are grouped into domain-significant, contract, operational, and unexpected categories.
 - Billing and notification technology details are translated before they affect the lifecycle model.
 
 ## Invariants
@@ -22,51 +22,38 @@
 - treating a gateway timeout as if it were a successful business renewal
 - letting notification delivery success determine whether the subscription renewed
 
-## Failure categories
+## Failure taxonomy
 
-### Domain-significant failures
-
-- renewal window closed
-- subscription cancelled
-- renewal already pending
-- grace period expired
-- retry no longer allowed
-
-These belong in the lifecycle model and should be named in business language.
-
-### Contract or input failures
-
-- missing subscription identity
-- unknown billing outcome category
-- malformed renewal request
-
-These indicate that the boundary interaction is wrong.
-
-### Operational failures
-
-- payment gateway timeout
-- message bus delay
-- database unavailable
-- notification provider outage
-
-These should be handled at the edge and translated before they affect the lifecycle model.
+| Failure | Category | Detected in | Stable surface | Recovery owner |
+|---|---|---|---|---|
+| renewal window closed | domain-significant | Lifecycle intake | renewal rejected | Lifecycle |
+| subscription cancelled | domain-significant | Lifecycle intake | renewal rejected | Lifecycle |
+| renewal already pending | domain-significant | Lifecycle intake | renewal rejected | Lifecycle |
+| missing subscription identity | contract / input | request boundary | invalid renewal request | edge adapter |
+| unknown billing outcome category | contract / input | Lifecycle seam | invalid billing outcome | Billing seam owner |
+| payment gateway timeout | operational | Billing edge | billing outcome unavailable | Billing / operations |
+| billing success with no pending renewal | unexpected outcome | Lifecycle outcome handler | unexpected billing outcome | Lifecycle |
+| notification provider outage | operational | Notifications edge | notification delivery delayed | Notifications / operations |
 
 ## Translation rule
 
-A gateway-specific error such as `provider_timeout_504` should not become a core lifecycle concept. The lifecycle context only needs a stable category such as `billing outcome unavailable` or `billing attempt unresolved`, if that distinction matters.
+A gateway-specific error such as `provider_timeout_504` should not become a core lifecycle concept.
+The lifecycle context only needs a stable category such as `billing outcome unavailable` if the distinction matters to business recovery.
 
 ## Review prompts
 
 - Are the invariants visible near the workflow and state rules they protect?
 - Are domain failures named in domain language?
 - Are operational failures translated before entering the core model?
+- Are unexpected or out-of-sequence outcomes quarantined instead of normalized?
 - Is notification behavior clearly secondary to lifecycle decisions?
 
 ## Related docs
 
 - `examples/subscription-renewal/04-workflows-and-state.md`
+- `examples/subscription-renewal/11-context-contracts.md`
+- `context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md`
 - `context/patterns/03-error-and-edge-translation-patterns.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
 - `context/principles/07-type-shaped-models-and-illegal-states.md`
-- `context/principles/10-serialization-persistence-and-data-ownership.md`
-- `context/review/02-architecture-review-checklist.md`
+- `context/review/06-event-and-contract-artifact-checklist.md`

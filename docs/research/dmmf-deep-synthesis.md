@@ -170,3 +170,43 @@ But it had thinner coverage of:
 The deepest reusable contribution from DMMF is this:
 
 **make domain meaning explicit early, keep trusted representations narrow, model workflows as visible transformations, and let persistence or integration adapt to the model instead of owning it.**
+
+## v0.2.0 targeted reread findings
+
+A more targeted reread of the DMMF sections on business events, contracts, explicit effects, errors, serialization, persistence, and change surfaced a few reusable moves worth codifying directly in the repo.
+
+1. **Business events deserve their own artifact shape.**
+   A past-tense event list reveals what the business notices, where workflows hand off, and where missing contracts or gaps exist.
+
+2. **Contracts are relationship-specific.**
+   Shared-kernel, consumer-driven, conformist, and anti-corruption seams should not be flattened into generic integration notes.
+
+3. **Workflow effects should stay visible.**
+   A useful workflow surface should make visible whether a step can reject, fail operationally, perform I/O, wait asynchronously, or depend on another context.
+
+4. **Internal step dependencies benefit from explicitness.**
+   Public workflow APIs may hide wiring detail, but internal workflow steps are easier to reason about when their dependencies are visible.
+
+5. **Error modeling works best as translation into stable envelopes.**
+   Validation failures, domain rejections, operational failures, and unexpected outcomes should often be collapsed into a smaller workflow-level surface.
+
+6. **Serialization and persistence remain separate concerns.**
+   Serialization is translation between domain and DTO shapes; persistence is about durable state and ownership; commands and queries often want different shapes.
+
+7. **Transactions follow consistency boundaries.**
+   Cross-service atomicity should not be implied; explicit boundaries, compensations, and coordination notes are preferable.
+
+8. **Change should first reshape language and artifact boundaries.**
+   Requirement changes should first be traced through vocabulary, events, workflows, contracts, and read/write ownership.
+
+## Impact on the v0.2.0 scope
+
+The targeted reread did **not** suggest a radically different scope.
+It confirmed that the right next move is to operationalize the DMMF-heavy corpus with:
+- business event discovery
+- explicit failure taxonomy
+- cross-context contracts and anti-corruption guidance
+- reusable templates
+- richer example event and contract notes
+
+So the reread mainly refined the shape of v0.2.0 rather than expanding it into another large theory pass.

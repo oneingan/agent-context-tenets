@@ -28,35 +28,52 @@ Read:
 ### Model a domain deeply
 Read:
 1. `docs/research/dmmf-deep-synthesis.md`
-2. `context/principles/07-type-shaped-models-and-illegal-states.md`
-3. `context/principles/08-entities-value-objects-and-aggregates.md`
-4. `context/principles/03-bounded-contexts-and-boundaries.md`
-5. `context/playbooks/05-trusted-and-untrusted-representations-playbook.md`
+2. `context/playbooks/01-domain-modeling-playbook.md`
+3. `context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md`
+4. `context/principles/07-type-shaped-models-and-illegal-states.md`
+5. `context/principles/08-entities-value-objects-and-aggregates.md`
+6. `context/principles/03-bounded-contexts-and-boundaries.md`
+
+### Discover business events or build an event catalog
+Read:
+1. `context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md`
+2. `context/principles/04-workflows-invariants-and-state.md`
+3. `examples/subscription-renewal/10-event-catalog.md`
 
 ### Model workflow behavior, effects, or state changes
 Read:
 1. `context/principles/04-workflows-invariants-and-state.md`
 2. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
 3. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
-4. `context/principles/05-errors-and-edge-responsibilities.md`
+4. `context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md`
+
+### Define cross-context contracts or translation seams
+Read:
+1. `context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md`
+2. `context/principles/03-bounded-contexts-and-boundaries.md`
+3. `context/principles/10-serialization-persistence-and-data-ownership.md`
+4. `examples/subscription-renewal/11-context-contracts.md`
 
 ### Integrate persistence or revisit data ownership
 Read:
 1. `context/principles/10-serialization-persistence-and-data-ownership.md`
 2. `context/playbooks/07-persistence-and-mapping-boundaries-playbook.md`
 3. `context/patterns/03-error-and-edge-translation-patterns.md`
+4. `examples/subscription-renewal/08-persistence-and-mapping-boundaries.md`
 
 ### Evolve the model after requirement changes
 Read:
 1. `context/principles/11-evolving-models-through-change.md`
-2. `context/playbooks/04-adr-writing-playbook.md`
+2. `templates/change-impact-analysis-template.md`
 3. `examples/subscription-renewal/09-change-scenarios.md`
+4. `context/playbooks/04-adr-writing-playbook.md`
 
 ### Review docs or designs
 Read:
 1. `context/review/01-quality-gates.md`
 2. `context/review/03-documentation-quality-checklist.md`
 3. `context/review/05-vocabulary-drift-checklist.md`
+4. `context/review/06-event-and-contract-artifact-checklist.md`
 
 ### See one worked example
 Read:
@@ -131,14 +148,3 @@ Current entry docs:
 - prefer tables, checklists, state descriptions, and short examples over long prose
 - update maps and manifests when adding new canonical docs or new major example areas
 
-## Current canonical layers available now
-
-- principles
-- patterns
-- glossary
-- playbooks
-- review
-
-## Current secondary example area
-
-- subscription renewal

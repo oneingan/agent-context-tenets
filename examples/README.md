@@ -12,3 +12,4 @@ Policy:
 - micro-examples before full apps
 - polyglot only when the language choice teaches something important
 - every example should point back to the canonical principles or playbooks it illustrates
+- event catalogs and contract tables in examples should stay compact and illustrative, not become the hidden specification

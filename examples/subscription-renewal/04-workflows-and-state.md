@@ -5,7 +5,7 @@
 - The example uses explicit workflow descriptions instead of implicit controller or database behavior.
 - Subscription Lifecycle owns the meaning of state transitions.
 - Billing outcomes are translated into lifecycle outcomes rather than treated as the same thing.
-- Long-running behavior is visible through waiting and grace states.
+- Long-running behavior is visible through waiting and grace states, and the emitted events are part of the workflow surface.
 
 ## Primary workflow: Renew Subscription
 
@@ -31,14 +31,15 @@
 2. verify renewal eligibility
 3. calculate the next renewal term
 4. transition to `renewal_pending_payment`
-5. request a billing attempt at the edge
-6. await billing outcome
+5. emit `renewal initiated`
+6. request a billing attempt at the edge
+7. await billing outcome
 
 ## Secondary workflow: Process Billing Outcome
 
 ### Trigger
 
-- Billing emits a success or failure outcome for a pending renewal
+- Billing reports a success or failure outcome for a pending renewal
 
 ### Input
 
@@ -59,7 +60,15 @@
 2. translate the billing outcome into lifecycle meaning
 3. decide whether to renew, retry, or lapse
 4. transition state accordingly
-5. emit lifecycle outcome for Notifications or other listeners
+5. emit the resulting lifecycle outcome
+6. request notification handling at the edge if needed
+
+## Workflow surface notes
+
+| Workflow | Visible edge effects | Main emitted events |
+|---|---|---|
+| renew subscription | request billing attempt | `renewal initiated`, `billing attempt requested` |
+| process billing outcome | persist state, request notification, maybe schedule retry | `renewal retry scheduled`, `subscription renewed`, `subscription lapsed` |
 
 ## State model
 
@@ -75,11 +84,11 @@
 
 | From | Trigger | Guard | To | Notes |
 |---|---|---|---|---|
-| active | renewal requested | within renewal window and not cancelled | renewal_pending_payment | initiate billing at the edge |
-| renewal_pending_payment | billing succeeded | pending attempt exists | active | extend term and emit renewal succeeded |
-| renewal_pending_payment | billing failed | retry still allowed | grace_period | emit retry scheduled |
+| active | renewal requested | within renewal window and not cancelled | renewal_pending_payment | emit `renewal initiated`; request billing at the edge |
+| renewal_pending_payment | billing succeeded | pending attempt exists | active | extend term and emit `subscription renewed` |
+| renewal_pending_payment | billing failed | retry still allowed | grace_period | emit `renewal retry scheduled` |
 | grace_period | retry requested | retry eligibility remains | renewal_pending_payment | start another billing attempt |
-| grace_period | grace period expired | no successful renewal | lapsed | emit subscription lapsed |
+| grace_period | grace period expired | no successful renewal | lapsed | emit `subscription lapsed` |
 | cancelled | renewal requested | none | cancelled | explicit rejection path |
 
 ## Long-running behavior notes
@@ -91,6 +100,8 @@
 ## Related docs
 
 - `examples/subscription-renewal/05-invariants-and-failure-model.md`
+- `examples/subscription-renewal/10-event-catalog.md`
+- `examples/subscription-renewal/11-context-contracts.md`
 - `examples/subscription-renewal/pseudocode/renew-subscription.md`
 - `examples/subscription-renewal/pseudocode/process-billing-outcome.md`
 - `context/patterns/02-workflow-and-state-transition-patterns.md`

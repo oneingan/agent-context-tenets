@@ -7,7 +7,7 @@ canonical: false
 entries:
   - path: examples/subscription-renewal/00-map.md
     title: Subscription Renewal Example Map
-    summary: Entry point for the first exemplar domain and its focused pseudocode illustrations.
+    summary: Entry point for the first exemplar domain, including event catalogs, contract tables, and focused pseudocode illustrations.
     load_when:
       - you want to see the framework applied end-to-end
       - you need a compact multi-context example

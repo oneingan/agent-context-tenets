@@ -121,6 +121,7 @@ Candidate contexts: Subscription Lifecycle, Billing, Notifications
 
 ## Related docs
 
+- `context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md`
 - `context/principles/02-ubiquitous-language-and-naming.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`
 - `context/principles/04-workflows-invariants-and-state.md`

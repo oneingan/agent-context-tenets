@@ -42,5 +42,6 @@ Without these trust stages, the Subscription Lifecycle context would need to und
 ## Related docs
 
 - `examples/subscription-renewal/04-workflows-and-state.md`
+- `examples/subscription-renewal/11-context-contracts.md`
 - `context/playbooks/05-trusted-and-untrusted-representations-playbook.md`
 - `context/principles/07-type-shaped-models-and-illegal-states.md`

@@ -99,6 +99,7 @@ For each boundary, answer:
 
 ## Related docs
 
+- `context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`
 - `context/glossary/02-naming-and-term-introduction.md`
 - `context/review/02-architecture-review-checklist.md`

@@ -6,6 +6,7 @@ It is **not** the canonical specification.
 Read first:
 - `examples/subscription-renewal/04-workflows-and-state.md`
 - `examples/subscription-renewal/05-invariants-and-failure-model.md`
+- `examples/subscription-renewal/11-context-contracts.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
 
 ```text
@@ -18,17 +19,20 @@ workflow process_billing_outcome(subscription_id, billing_outcome):
   if billing_outcome == success:
     extend_subscription_term(subscription)
     transition subscription to active
-    emit_lifecycle_outcome("subscription renewed")
+    emit_event("subscription renewed")
+    request_notification_at_edge("subscription renewed")
     return accepted("renewal completed")
 
   if billing_outcome == failure and retry_is_allowed(subscription):
     transition subscription to grace_period
     schedule_retry_at_edge(subscription.id)
-    emit_lifecycle_outcome("renewal retry scheduled")
+    emit_event("renewal retry scheduled")
+    request_notification_at_edge("renewal retry scheduled")
     return accepted("retry scheduled")
 
   transition subscription to lapsed
-  emit_lifecycle_outcome("subscription lapsed")
+  emit_event("subscription lapsed")
+  request_notification_at_edge("subscription lapsed")
   return accepted("subscription lapsed")
 ```
 
@@ -36,7 +40,7 @@ workflow process_billing_outcome(subscription_id, billing_outcome):
 
 - Billing owns the payment attempt, but Lifecycle owns the meaning of state changes
 - retry scheduling is an edge concern triggered by a domain decision
-- notification handling should react to lifecycle outcomes, not decide them
+- notification handling reacts to lifecycle outcomes; it does not decide them
 
 ## Related docs
 

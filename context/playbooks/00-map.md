@@ -7,8 +7,15 @@ This directory contains task-oriented guidance for applying the framework.
 ### If you need to shape a domain model
 Read:
 1. `context/playbooks/01-domain-modeling-playbook.md`
-2. `context/principles/02-ubiquitous-language-and-naming.md`
-3. `context/principles/03-bounded-contexts-and-boundaries.md`
+2. `context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md`
+3. `context/principles/02-ubiquitous-language-and-naming.md`
+4. `context/principles/03-bounded-contexts-and-boundaries.md`
+
+### If you need to discover business events or build an event catalog
+Read:
+1. `context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md`
+2. `context/principles/04-workflows-invariants-and-state.md`
+3. `examples/subscription-renewal/10-event-catalog.md`
 
 ### If you need to model trusted vs untrusted data
 Read:
@@ -25,11 +32,18 @@ Read:
 1. `context/playbooks/02-bounded-context-definition-playbook.md`
 2. `context/principles/03-bounded-contexts-and-boundaries.md`
 
-### If you need to model workflow behavior or states
+### If you need to model workflow behavior, failure meaning, or states
 Read:
 1. `context/playbooks/03-workflow-and-state-modeling-playbook.md`
-2. `context/principles/04-workflows-invariants-and-state.md`
-3. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
+2. `context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md`
+3. `context/principles/04-workflows-invariants-and-state.md`
+4. `context/principles/09-workflow-pipelines-effects-and-dependencies.md`
+
+### If you need to design cross-context contracts or anti-corruption seams
+Read:
+1. `context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md`
+2. `context/principles/03-bounded-contexts-and-boundaries.md`
+3. `context/principles/10-serialization-persistence-and-data-ownership.md`
 
 ### If you need to design persistence and mapping boundaries
 Read:
@@ -57,6 +71,12 @@ Read:
   - how to classify concepts and choose aggregate boundaries
 - `07-persistence-and-mapping-boundaries-playbook.md`
   - how to keep storage and wire shapes from owning the model
+- `08-business-event-discovery-and-event-catalog-playbook.md`
+  - how to extract business events and turn them into reusable event catalogs
+- `09-domain-error-and-failure-taxonomy-playbook.md`
+  - how to classify failures by meaning and expose stable failure surfaces
+- `10-cross-context-contract-and-anti-corruption-playbook.md`
+  - how to document contracts, ownership, and translation seams between contexts
 
 ## Directory rules
 

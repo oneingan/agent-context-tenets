@@ -5,6 +5,8 @@ This is a small illustration of the `renew subscription` workflow.
 It is **not** the canonical specification.
 Read first:
 - `examples/subscription-renewal/04-workflows-and-state.md`
+- `examples/subscription-renewal/10-event-catalog.md`
+- `examples/subscription-renewal/11-context-contracts.md`
 - `context/principles/04-workflows-invariants-and-state.md`
 - `context/principles/05-errors-and-edge-responsibilities.md`
 
@@ -25,6 +27,7 @@ workflow renew_subscription(subscription_id, renewal_request):
 
   transition subscription to renewal_pending_payment
   record pending renewal attempt for next_term
+  emit_event("renewal initiated")
 
   request_billing_attempt_at_edge(
     subscription_id = subscription.id,
@@ -38,7 +41,7 @@ workflow renew_subscription(subscription_id, renewal_request):
 ## Notes
 
 - eligibility and state meaning stay in the lifecycle model
-- the billing request is an edge action
+- the billing request is an edge action governed by a seam contract
 - no gateway-specific detail leaks into the core workflow here
 
 ## Related docs

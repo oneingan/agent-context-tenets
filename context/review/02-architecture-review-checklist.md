@@ -2,7 +2,7 @@
 
 ## Summary
 
-- Use this checklist to review domain shape, boundaries, workflows, errors, and retrieval structure.
+- Use this checklist to review domain shape, boundaries, workflows, errors, contracts, and retrieval structure.
 - Apply it to canonical docs, exemplar domains, or project-specific context packs.
 - Mark findings by severity so reviewers know what must change first.
 
@@ -26,6 +26,7 @@
 - [ ] responsibilities and non-responsibilities are explicit
 - [ ] neighboring contexts or systems are identified
 - [ ] translations are explicit where meanings differ
+- [ ] important cross-context contracts are named and easy to find
 
 ### Vocabulary and meaning
 
@@ -39,6 +40,7 @@
 - [ ] states and transitions are explicit where behavior changes over time
 - [ ] invariants are visible near the workflows or states they govern
 - [ ] long-running concerns are documented when relevant
+- [ ] important business events are explicit where workflows hand off or publish outcomes
 
 ### Errors and edges
 

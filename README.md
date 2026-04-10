@@ -1,6 +1,6 @@
 # agent-context-tenets
 
-> Working title for a reusable, language-agnostic AI agent context framework.
+> Reusable, language-agnostic AI agent context framework for DDD, workflows, patterns, review checklists, and pseudocode-first examples.
 
 ## Why this repository exists
 
@@ -28,14 +28,14 @@ This repo is being designed from three main sources:
    - bounded contexts
    - explicit invariants and state transitions
    - workflow/pipeline thinking
-   - domain events and edge-bound persistence
+   - domain events, contracts, and edge-bound persistence
 
 3. **John Ousterhout — _A Philosophy of Software Design_**
    - strategic programming
    - deep modules
    - information hiding
    - error prevention over error handling
-   - comments/ADRs as design tools
+   - comments, naming, and ADRs as design tools
 
 ## Repository stance
 
@@ -74,8 +74,8 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `docs/repository-plan.md` — implementation roadmap
 - `docs/research/source-synthesis.md` — distilled design inputs
 - `docs/research/context-window-strategy.md` — large-repo operating model for agents
-- `docs/research/dmmf-deep-synthesis.md` — deeper DMMF chapter-to-framework mapping
-- `docs/research/aposd-follow-up-notes-for-dmmf-iteration.md` — APOSD notes supporting the DMMF-heavy iteration
+- `docs/research/dmmf-deep-synthesis.md` — deeper DMMF chapter-to-framework mapping, now extended with v0.2.0 targeted reread findings
+- `docs/research/aposd-follow-up-notes-for-dmmf-iteration.md` — APOSD notes supporting the DMMF-heavy iterations and v0.2.0 packaging
 - `docs/publication-and-maintenance.md` — publication baseline and push checklist
 - `docs/adr/0001-example-strategy.md` — code vs pseudocode vs polyglot policy
 - `docs/adr/0002-information-architecture-and-manifests.md` — structural decision for maps/manifests/layers
@@ -90,13 +90,22 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `context/principles/00-map.md` — canonical design rules, including deeper DMMF-focused docs
 - `context/patterns/00-map.md` — reusable solution shapes
 - `context/glossary/00-map.md` — vocabulary and naming governance
-- `context/playbooks/00-map.md` — task-oriented procedures, including deeper DMMF-focused execution playbooks
-- `context/review/00-map.md` — quality gates and checklists
+- `context/playbooks/00-map.md` — task-oriented procedures, including event discovery, failure taxonomy, and cross-context contract guidance
+- `context/review/00-map.md` — quality gates and checklists, including event/contract artifact review
 
 ### Secondary example area available now
 
 - `examples/00-map.md` — example entrypoint
-- `examples/subscription-renewal/00-map.md` — first exemplar domain
+- `examples/subscription-renewal/00-map.md` — first exemplar domain, now expanded with event catalogs and contract tables
+
+### Reusable templates available now
+
+- `templates/README.md`
+- `templates/event-catalog-template.md`
+- `templates/trust-boundary-template.md`
+- `templates/aggregate-decision-template.md`
+- `templates/cross-context-contract-template.md`
+- `templates/change-impact-analysis-template.md`
 
 ### Lightweight tooling available now
 
@@ -116,42 +125,39 @@ That keeps the framework language agnostic while still showing trade-offs betwee
 - `context/manifests/playbooks-manifest.yaml` — playbook index
 - `context/manifests/review-manifest.yaml` — review index
 - `context/manifests/examples-manifest.yaml` — examples index
-- `LICENSE` — MIT license for v0
+- `LICENSE` — MIT license
 - `.pi/todos/` — implementation backlog for the repo itself
 
-## Success criteria for v0
+## Success criteria
 
-A good v0 should let an agent:
+A good release should let an agent:
 
 1. understand the framework without loading the whole repo
 2. find the right context by topic and task
-3. reason about domains, boundaries, and workflows in a language-neutral way
+3. reason about domains, boundaries, events, contracts, workflows, and failures in a language-neutral way
 4. apply the framework to a new project with minimal adaptation
-5. evolve over time through ADRs, manifests, and small focused documents
+5. evolve over time through ADRs, manifests, small focused documents, and explicit examples
 
 ## Current status
 
 The repository now includes:
 
-- git initialization and commits
 - planning and research documents
 - ADRs for example strategy, information architecture, exemplar-domain choice, tooling strategy, publication baseline, and license choice
 - canonical principles derived from the source books
-- a deeper second-pass DMMF synthesis with more granular principle docs
 - reusable patterns for boundaries, workflows, errors, and example linking
 - glossary and naming governance
-- playbooks for domain modeling, boundaries, workflows, and ADRs
-- review checklists and repo quality gates
-- a first exemplar domain: subscription renewal, now deepened with trust boundaries, aggregate decisions, persistence boundaries, and change scenarios
+- playbooks for domain modeling, boundaries, workflows, trusted data, aggregate design, persistence boundaries, business event discovery, failure taxonomy, and cross-context contracts
+- review checklists and repo quality gates, including event/contract artifact review
+- reusable templates for event catalogs, trust boundaries, aggregate decisions, contracts, and change-impact analysis
+- a first exemplar domain: subscription renewal, expanded with event catalogs, contract notes, persistence/projection guidance, and change scenarios
 - lightweight validation scripts for manifests and doc budgets
-- contribution guidance and CI validation
-- context maps, manifests, and templates
-- `/todos`-based implementation backlog stored in-repo
+- contribution guidance, CI validation, releases, and `/todos`-based backlog management
 
-## Recommended next steps
+## Recommended next steps after v0.2.0
 
-- deepen playbooks and examples where the new DMMF-focused principles expose gaps
-- experiment with additional exemplar domains only if they teach genuinely new lessons
+- apply the framework to an external project or context pack and see where the playbooks still feel thin
+- add a second exemplar domain only if it teaches genuinely different modeling lessons
 - revisit export automation later if manual reuse becomes painful
 - add polyglot micro-examples only when a language-specific lesson is worth the extra context
 - see `CONTRIBUTING.md` and `docs/publication-and-maintenance.md` for maintenance guidance

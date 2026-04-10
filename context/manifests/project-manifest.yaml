@@ -1,6 +1,6 @@
 repo:
   name: agent-context-tenets
-  status: iteration-3-active
+  status: v0.2.0-released
   purpose: >-
     A reusable, language-agnostic AI agent context framework optimized for
     progressive loading under limited context windows.
@@ -54,6 +54,11 @@ areas:
     role: secondary-illustrations
     map: examples/00-map.md
     manifest: context/manifests/examples-manifest.yaml
+    canonical: false
+    status: active
+
+  - path: templates
+    role: authoring-templates
     canonical: false
     status: active
 
@@ -120,6 +125,12 @@ canonical_documents:
     topic: aggregate-design-playbook
   - path: context/playbooks/07-persistence-and-mapping-boundaries-playbook.md
     topic: persistence-mapping-playbook
+  - path: context/playbooks/08-business-event-discovery-and-event-catalog-playbook.md
+    topic: event-discovery-playbook
+  - path: context/playbooks/09-domain-error-and-failure-taxonomy-playbook.md
+    topic: failure-taxonomy-playbook
+  - path: context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md
+    topic: cross-context-contract-playbook
   - path: context/review/01-quality-gates.md
     topic: quality-gates
   - path: context/review/02-architecture-review-checklist.md
@@ -130,6 +141,8 @@ canonical_documents:
     topic: example-review
   - path: context/review/05-vocabulary-drift-checklist.md
     topic: vocabulary-review
+  - path: context/review/06-event-and-contract-artifact-checklist.md
+    topic: event-and-contract-review
   - path: docs/adr/0001-example-strategy.md
     topic: examples-policy
   - path: docs/adr/0002-information-architecture-and-manifests.md

@@ -71,6 +71,7 @@ Create a small table or note showing data ownership, mapping boundaries, and sto
 
 ## Related docs
 
+- `context/playbooks/10-cross-context-contract-and-anti-corruption-playbook.md`
 - `context/principles/10-serialization-persistence-and-data-ownership.md`
 - `context/principles/03-bounded-contexts-and-boundaries.md`
 - `examples/subscription-renewal/08-persistence-and-mapping-boundaries.md`
